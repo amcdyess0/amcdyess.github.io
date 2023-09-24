@@ -142,6 +142,7 @@
     flex-direction: column; 
     height: 100%;
     width: 100%;
+    overflow-y: scroll;
 }
 
 .aboutDiv {
@@ -149,13 +150,13 @@
     flex-direction: row;
     justify-content: center;
     height: 88vh;
-    overflow-y:scroll;
+    overflow-y:none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.aboutDiv:after {
+.aboutMePage:after {
     content: "";
-  position: absolute;
+  position:absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -205,6 +206,13 @@
     .app {
         display: flex;
         flex-direction: column;
+        overflow-y: scroll;
+        overflow-x: none;
+        justify-content: center;
+    }
+
+    .app::-webkit-scrollbar {
+        visibility: hidden;
     }
     .Banner {
         display: flex;
@@ -218,9 +226,9 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-between;
-        height: 100vh;
-        overflow-y: scroll;
+        justify-content: space-around;
+        height: 80vh;
+        overflow-y: none;
     }
 
     .tabs {
@@ -251,10 +259,24 @@
     .skillIcon{
         width: 20vw;
     }
+
+    .linkIcon {
+        width: 30vw;
+        height: 20vh;
+    }
+
     .aboutDiv{
         height: 100vh;
     }
     .aboutDiv:after{
         height: 10vh;
     }
+
+    .logoClass {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 70vh;
+        overflow: none;
+    }   
 }
